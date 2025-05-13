@@ -4,6 +4,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.13.35919.96
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Livraria", "Livraria\Livraria.csproj", "{3DEB2961-749A-4DB2-90B6-240486FE5E61}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8BDB449F-EC20-4398-8563-0E142C981A24} = {8BDB449F-EC20-4398-8563-0E142C981A24}
+		{FC5952AB-9246-46EC-B62D-A012F1A3B546} = {FC5952AB-9246-46EC-B62D-A012F1A3B546}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLib", "ClassLib\ClassLib.csproj", "{FC5952AB-9246-46EC-B62D-A012F1A3B546}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Apresentacao", "Apresentacao", "{6034F9C4-223E-409B-9C1A-94331B13A3E0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dominio", "Dominio", "{A52697F9-111D-405B-ACB6-CF70B0755F67}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{334345A7-7E1B-48CC-A641-30D37943D0C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Livraria.Infra", "Livraria.Infra\Livraria.Infra.csproj", "{8BDB449F-EC20-4398-8563-0E142C981A24}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +29,22 @@ Global
 		{3DEB2961-749A-4DB2-90B6-240486FE5E61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DEB2961-749A-4DB2-90B6-240486FE5E61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DEB2961-749A-4DB2-90B6-240486FE5E61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC5952AB-9246-46EC-B62D-A012F1A3B546}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC5952AB-9246-46EC-B62D-A012F1A3B546}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC5952AB-9246-46EC-B62D-A012F1A3B546}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC5952AB-9246-46EC-B62D-A012F1A3B546}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BDB449F-EC20-4398-8563-0E142C981A24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BDB449F-EC20-4398-8563-0E142C981A24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BDB449F-EC20-4398-8563-0E142C981A24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BDB449F-EC20-4398-8563-0E142C981A24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3DEB2961-749A-4DB2-90B6-240486FE5E61} = {6034F9C4-223E-409B-9C1A-94331B13A3E0}
+		{FC5952AB-9246-46EC-B62D-A012F1A3B546} = {A52697F9-111D-405B-ACB6-CF70B0755F67}
+		{8BDB449F-EC20-4398-8563-0E142C981A24} = {334345A7-7E1B-48CC-A641-30D37943D0C3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {ED4D3781-FB75-4F84-ACD9-FCAB080DCDAD}
