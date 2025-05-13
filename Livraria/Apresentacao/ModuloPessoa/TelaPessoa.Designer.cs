@@ -53,10 +53,10 @@
             numericUpDown1 = new NumericUpDown();
             label8 = new Label();
             cargoFuncionario = new ComboBox();
-            panel3 = new Panel();
             button1 = new Button();
             pageSetupDialog1 = new PageSetupDialog();
             label1 = new Label();
+            panel3 = new Panel();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             tabControl1.SuspendLayout();
@@ -81,7 +81,7 @@
             panel1.Controls.Add(label3);
             panel1.Controls.Add(label2);
             panel1.ImeMode = ImeMode.NoControl;
-            panel1.Location = new Point(12, 12);
+            panel1.Location = new Point(12, 15);
             panel1.Name = "panel1";
             panel1.Size = new Size(383, 355);
             panel1.TabIndex = 0;
@@ -320,14 +320,6 @@
             cargoFuncionario.TabIndex = 0;
             cargoFuncionario.SelectedIndexChanged += cargaFuncionario;
             // 
-            // panel3
-            // 
-            panel3.Controls.Add(button1);
-            panel3.Location = new Point(12, 373);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(776, 65);
-            panel3.TabIndex = 2;
-            // 
             // button1
             // 
             button1.BackColor = SystemColors.GradientInactiveCaption;
@@ -347,6 +339,14 @@
             label1.Size = new Size(53, 20);
             label1.TabIndex = 0;
             label1.Text = "Pessoa";
+            // 
+            // panel3
+            // 
+            panel3.Controls.Add(button1);
+            panel3.Location = new Point(12, 373);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(776, 65);
+            panel3.TabIndex = 2;
             // 
             // TelaPessoa
             // 
@@ -380,7 +380,6 @@
 
         private Panel panel1;
         private Panel panel2;
-        private Panel panel3;
         private Button button1;
         private PageSetupDialog pageSetupDialog1;
         private Label label2;
@@ -407,5 +406,6 @@
         private ComboBox cargoFuncionario;
         private Label label11;
         private TextBox textBox2;
+        private Panel panel3;
     }
 }

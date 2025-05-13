@@ -14,3 +14,4 @@ public enum CargoFuncionario
     [Description("Estagiário")]
     Estagiario = 4
 }
+//Gilberto Mota de Oliveira Junior

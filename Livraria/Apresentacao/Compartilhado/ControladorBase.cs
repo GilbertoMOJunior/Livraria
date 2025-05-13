@@ -59,11 +59,6 @@
             if (resposta != DialogResult.Yes) return false;
             return true;
         }
-        protected void RealizarAcao(Action acao, object materia, string texto)
-        {
-            acao();
-            CarregarRegistros();
-        }
         #endregion
     }
 }

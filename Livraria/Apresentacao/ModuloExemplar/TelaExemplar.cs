@@ -1,5 +1,4 @@
-﻿using ProjetoFinalBiblioteca;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,10 +17,11 @@ namespace Trabalho_Forms
         {
             InitializeComponent();
             // carrega os valores do Enum para o combobox/Listbox
-            statusExemplar.DataSource = Enum.GetValues(typeof(EnumExemplarStatus));
+            statusExemplar.DataSource = Enum.GetValues(typeof(StatusExemplar));
             statusExemplar.SelectedIndex = 0;
-            listaGenerico.DataSource = Enum.GetValues(typeof(EnumGenericoTipo));
+            listaGenerico.DataSource = Enum.GetValues(typeof(TipoGenerico));
             listaGenerico.SelectedIndex = 0;
+
         }
 
         private void TelaExemplar_Load(object sender, EventArgs e)
@@ -140,4 +140,4 @@ namespace Trabalho_Forms
         }
     }
 }
-//Iago Henrique Schlemper
+//Gilberto Mota de Oliveira Junior

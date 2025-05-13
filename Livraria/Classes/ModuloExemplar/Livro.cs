@@ -9,7 +9,7 @@ public class Livro : Exemplar
     public string Isbn { get; set; }
 
 
-    public Livro(int paginas, TipoCapa tipoCapa, string isbn, string titulo, string subTitulo, string escritor, string editora, int anoPublicado, string genero, int status) : base(titulo, subTitulo, escritor, editora, anoPublicado, genero, status)
+    public Livro(int paginas, TipoCapa tipoCapa, string isbn, string titulo, string subTitulo, string escritor, string editora, int anoPublicado, Genero genero, StatusExemplar status) : base(titulo, subTitulo, escritor, editora, anoPublicado, genero, status)
     {
         Paginas = paginas;
         TipoCapa = tipoCapa;
@@ -26,3 +26,4 @@ public class Livro : Exemplar
     }
 
 }
+//Gilberto Mota de Oliveira Junior

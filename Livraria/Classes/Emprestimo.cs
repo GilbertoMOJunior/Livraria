@@ -12,13 +12,12 @@ namespace Livraria.Classes
         public DateTime DataEmprestimo { get; set; }
         public DateTime DataDevolucao { get; set; }
 
-        public Emprestimo(Leitor origem, Leitor destino, Exemplar item, DateTime emprestimo, DateTime devolucao)
+        public Emprestimo(Leitor origem, Leitor destino, Exemplar item)
         {
             Origem = origem;
             Destino = destino;
             Item = item;
-            DataEmprestimo = emprestimo;
-            DataDevolucao = devolucao;
+            DataEmprestimo = DateTime.Now;
         }
 
         public string MostrarDados()
@@ -27,3 +26,4 @@ namespace Livraria.Classes
         }
     }
 }
+//Gilberto Mota de Oliveira Junior

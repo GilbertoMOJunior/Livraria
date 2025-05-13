@@ -1,5 +1,4 @@
-﻿using ProjetoFinalBiblioteca;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,7 +17,7 @@ public partial class TelaPessoa : Form
         InitializeComponent();
 
         // carrega os valores do Enum para o combobox/Listbox
-        cargoFuncionario.DataSource = Enum.GetValues(typeof(EnumFuncionarioCargo));
+        cargoFuncionario.DataSource = Enum.GetValues(typeof(CargoFuncionario));
         cargoFuncionario.SelectedIndex = 0;
     }
 
@@ -92,4 +91,4 @@ public partial class TelaPessoa : Form
 
     }
 }
-//Iago Henrique Schlemper
+//Gilberto Mota de Oliveira Junior

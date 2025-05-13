@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel;
-using Livraria.Common;
 using Livraria.Extensions;
 
 namespace Livraria.Classes.ModuloExemplar
@@ -10,7 +9,7 @@ namespace Livraria.Classes.ModuloExemplar
         public double Tamanho { get; set; }
         public string Url { get; set; }
 
-        public Ebook(FormatoEbook formato, double tamanho, string url, int paginas, string tipoCapa, string isbn, string titulo, string subTitulo, string escritor, string editora, int anoPublicado, string genero, int status) : base(paginas, tipoCapa, isbn, titulo, subTitulo, escritor, editora, anoPublicado, genero, status)
+        public Ebook(FormatoEbook formato, double tamanho, string url, int paginas, TipoCapa tipoCapa, string isbn, string titulo, string subTitulo, string escritor, string editora, int anoPublicado, Genero genero, StatusExemplar status) : base(paginas, tipoCapa, isbn, titulo, subTitulo, escritor, editora, anoPublicado, genero, status)
         {
             Formato = formato;
             Tamanho = tamanho;
@@ -26,7 +25,6 @@ namespace Livraria.Classes.ModuloExemplar
                    $"\nTamanho (MB): {Tamanho}" +
                    $"\nURL: {Url}";
         }
-
-        
+        //Gilberto Mota de Oliveira Junior
     }
 }

@@ -37,3 +37,4 @@ public abstract class Exemplar : Dados
                $"Status: {Status.GetDescription()}";
     }
 }
+//Gilberto Mota de Oliveira Junior

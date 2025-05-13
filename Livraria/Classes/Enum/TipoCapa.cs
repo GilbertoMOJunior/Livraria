@@ -35,3 +35,4 @@ public enum TipoCapa
     [Description("Capa Digital")]
     CapaDigital = 11
 }
+//Gilberto Mota de Oliveira Junior

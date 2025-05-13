@@ -66,12 +66,14 @@
             pessoasToolStripMenuItem.Name = "pessoasToolStripMenuItem";
             pessoasToolStripMenuItem.Size = new Size(224, 26);
             pessoasToolStripMenuItem.Text = "Pessoas";
+            pessoasToolStripMenuItem.Click += pessoasToolStripMenuItem_Click;
             // 
             // exemplaresToolStripMenuItem
             // 
             exemplaresToolStripMenuItem.Name = "exemplaresToolStripMenuItem";
             exemplaresToolStripMenuItem.Size = new Size(224, 26);
             exemplaresToolStripMenuItem.Text = "Exemplares";
+            exemplaresToolStripMenuItem.Click += exemplaresToolStripMenuItem_Click;
             // 
             // exemplaresToolStripMenuItem1
             // 

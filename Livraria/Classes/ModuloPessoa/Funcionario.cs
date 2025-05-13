@@ -5,7 +5,7 @@ namespace Livraria.Classes.ModuloPessoa;
 
 public class Funcionario : Pessoa
 {
-    public Funcionario(CargoFuncionario cargo, decimal salario, int cargaHoraria, string funcao, string nome, DateTime nascimento, string cpf, string telefone, string email) : base(id, nome, nascimento, cpf, telefone, email)
+    public Funcionario(CargoFuncionario cargo, decimal salario, int cargaHoraria, string funcao, string nome, DateTime nascimento, string cpf, string telefone, string email) : base(nome, nascimento, cpf, telefone, email)
     {
         Cargo = cargo;
         Salario = salario;
@@ -44,4 +44,4 @@ public class Funcionario : Pessoa
         return $"{dadosBase}\nCargo: {Cargo.GetDescription()}\nSalário: R$ {Salario:F2}\nCarga Horária: {CargaHoraria}h\nFunção: {Funcao}";
     }
 }
-
+//Gilberto Mota de Oliveira Junior

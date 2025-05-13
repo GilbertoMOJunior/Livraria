@@ -26,7 +26,7 @@ namespace Livraria.Repositorios.Pessoa
 
                 else if (entidade.Id == id)
                 {
-                    entidade.AtualizarRegistro(novaEntidade);
+                    //entidade.AtualizarRegistro(novaEntidade);
 
                     return true;
                 }

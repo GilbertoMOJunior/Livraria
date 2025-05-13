@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel;
-using System.Reflection;
 
 public enum TipoGenerico
 {
@@ -42,3 +41,4 @@ public enum TipoGenerico
     [Description("Outros")]
     Outros = 13
 }
+//Gilberto Mota de Oliveira Junior

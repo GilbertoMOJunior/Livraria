@@ -38,3 +38,4 @@ public class Leitor : Pessoa
         return $"{dadosBase}\nTipo: {Tipo}\nExemplares: {exemplares}\nEmpréstimos: {emprestimos}";
     }
 }
+//Gilberto Mota de Oliveira Junior

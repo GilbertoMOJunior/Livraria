@@ -6,6 +6,7 @@ namespace Livraria.Repositorios.Pessoa
     {
         protected List<Leitor> registros = [];
 
+        #region CRUD
         protected int contadorId = 1;
 
         public void Cadastrar(Leitor novoRegistro)
@@ -26,7 +27,7 @@ namespace Livraria.Repositorios.Pessoa
 
                 else if (entidade.Id == id)
                 {
-                    entidade.AtualizarRegistro(novaEntidade);
+                    //entidade.AtualizarRegistro(novaEntidade);
 
                     return true;
                 }
@@ -70,5 +71,6 @@ namespace Livraria.Repositorios.Pessoa
         {
             return registros;
         }
+        #endregion
     }
 }

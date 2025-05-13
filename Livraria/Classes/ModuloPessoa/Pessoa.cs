@@ -33,3 +33,4 @@ public abstract class Pessoa : Dados
         return $"Nome: {Nome}\nNascimento: {Nascimento:dd/MM/yyyy}\nCPF: {Cpf}\nEmail: {Email}\nTelefone: {Telefone}";
     }
 }
+//Gilberto Mota de Oliveira Junior
