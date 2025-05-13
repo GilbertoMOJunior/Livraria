@@ -1,10 +1,28 @@
-﻿namespace Livraria.Classes.Enum
+﻿using System.ComponentModel;
+
+public enum Genero
 {
-    public enum Generos
-    {
-        Litetaura = 1,
-        Romance = 2,
-        Ficcao = 3,
-        Terror = 4
-    }
+    [Description("Romance")]
+    Romance = 1,
+
+    [Description("Novela")]
+    Novela = 2,
+
+    [Description("Conto")]
+    Conto = 3,
+
+    [Description("Crônica")]
+    Cronica = 4,
+
+    [Description("Poema")]
+    Poema = 5,
+
+    [Description("Canção")]
+    Cancao = 6,
+
+    [Description("Drama Histórico")]
+    DramaHistorico = 7,
+
+    [Description("Teatro de Vanguarda")]
+    TeatroDeVanguarda = 8
 }

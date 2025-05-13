@@ -32,13 +32,7 @@
             menuStrip1 = new MenuStrip();
             cadastrosToolStripMenuItem = new ToolStripMenuItem();
             pessoasToolStripMenuItem = new ToolStripMenuItem();
-            funcioanriosToolStripMenuItem = new ToolStripMenuItem();
-            leitoresToolStripMenuItem = new ToolStripMenuItem();
             exemplaresToolStripMenuItem = new ToolStripMenuItem();
-            hQToolStripMenuItem = new ToolStripMenuItem();
-            livroToolStripMenuItem = new ToolStripMenuItem();
-            revistaToolStripMenuItem = new ToolStripMenuItem();
-            genericoToolStripMenuItem = new ToolStripMenuItem();
             exemplaresToolStripMenuItem1 = new ToolStripMenuItem();
             toolStrip1 = new ToolStrip();
             btnAdicionar = new ToolStripButton();
@@ -55,7 +49,8 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { cadastrosToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 24);
+            menuStrip1.Padding = new Padding(7, 3, 0, 3);
+            menuStrip1.Size = new Size(914, 30);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -63,64 +58,20 @@
             // 
             cadastrosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { pessoasToolStripMenuItem, exemplaresToolStripMenuItem });
             cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
-            cadastrosToolStripMenuItem.Size = new Size(71, 20);
+            cadastrosToolStripMenuItem.Size = new Size(88, 24);
             cadastrosToolStripMenuItem.Text = "Cadastros";
             // 
             // pessoasToolStripMenuItem
             // 
-            pessoasToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { funcioanriosToolStripMenuItem, leitoresToolStripMenuItem });
             pessoasToolStripMenuItem.Name = "pessoasToolStripMenuItem";
-            pessoasToolStripMenuItem.Size = new Size(134, 22);
+            pessoasToolStripMenuItem.Size = new Size(224, 26);
             pessoasToolStripMenuItem.Text = "Pessoas";
-            // 
-            // funcioanriosToolStripMenuItem
-            // 
-            funcioanriosToolStripMenuItem.Name = "funcioanriosToolStripMenuItem";
-            funcioanriosToolStripMenuItem.Size = new Size(142, 22);
-            funcioanriosToolStripMenuItem.Text = "Funcioanrios";
-            funcioanriosToolStripMenuItem.Click += funcioanriosToolStripMenuItem_Click;
-            // 
-            // leitoresToolStripMenuItem
-            // 
-            leitoresToolStripMenuItem.Name = "leitoresToolStripMenuItem";
-            leitoresToolStripMenuItem.Size = new Size(142, 22);
-            leitoresToolStripMenuItem.Text = "Leitores";
-            leitoresToolStripMenuItem.Click += leitoresToolStripMenuItem_Click;
             // 
             // exemplaresToolStripMenuItem
             // 
-            exemplaresToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { hQToolStripMenuItem, livroToolStripMenuItem, revistaToolStripMenuItem, genericoToolStripMenuItem });
             exemplaresToolStripMenuItem.Name = "exemplaresToolStripMenuItem";
-            exemplaresToolStripMenuItem.Size = new Size(134, 22);
+            exemplaresToolStripMenuItem.Size = new Size(224, 26);
             exemplaresToolStripMenuItem.Text = "Exemplares";
-            // 
-            // hQToolStripMenuItem
-            // 
-            hQToolStripMenuItem.Name = "hQToolStripMenuItem";
-            hQToolStripMenuItem.Size = new Size(121, 22);
-            hQToolStripMenuItem.Text = "HQ";
-            hQToolStripMenuItem.Click += hQToolStripMenuItem_Click;
-            // 
-            // livroToolStripMenuItem
-            // 
-            livroToolStripMenuItem.Name = "livroToolStripMenuItem";
-            livroToolStripMenuItem.Size = new Size(121, 22);
-            livroToolStripMenuItem.Text = "Livro";
-            livroToolStripMenuItem.Click += livroToolStripMenuItem_Click;
-            // 
-            // revistaToolStripMenuItem
-            // 
-            revistaToolStripMenuItem.Name = "revistaToolStripMenuItem";
-            revistaToolStripMenuItem.Size = new Size(121, 22);
-            revistaToolStripMenuItem.Text = "Revista";
-            revistaToolStripMenuItem.Click += revistaToolStripMenuItem_Click;
-            // 
-            // genericoToolStripMenuItem
-            // 
-            genericoToolStripMenuItem.Name = "genericoToolStripMenuItem";
-            genericoToolStripMenuItem.Size = new Size(121, 22);
-            genericoToolStripMenuItem.Text = "Generico";
-            genericoToolStripMenuItem.Click += genericoToolStripMenuItem_Click;
             // 
             // exemplaresToolStripMenuItem1
             // 
@@ -129,10 +80,11 @@
             // 
             // toolStrip1
             // 
+            toolStrip1.ImageScalingSize = new Size(20, 20);
             toolStrip1.Items.AddRange(new ToolStripItem[] { btnAdicionar, btnEditar, btnExcluir });
-            toolStrip1.Location = new Point(0, 24);
+            toolStrip1.Location = new Point(0, 30);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(800, 25);
+            toolStrip1.Size = new Size(914, 27);
             toolStrip1.TabIndex = 1;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -142,7 +94,7 @@
             btnAdicionar.Image = (Image)resources.GetObject("btnAdicionar.Image");
             btnAdicionar.ImageTransparentColor = Color.Magenta;
             btnAdicionar.Name = "btnAdicionar";
-            btnAdicionar.Size = new Size(23, 22);
+            btnAdicionar.Size = new Size(29, 24);
             btnAdicionar.Text = "toolStripButton1";
             btnAdicionar.Click += btnAdicionar_Click;
             // 
@@ -152,7 +104,7 @@
             btnEditar.Image = (Image)resources.GetObject("btnEditar.Image");
             btnEditar.ImageTransparentColor = Color.Magenta;
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(23, 22);
+            btnEditar.Size = new Size(29, 24);
             btnEditar.Text = "toolStripButton2";
             btnEditar.Click += btnEditar_Click;
             // 
@@ -162,27 +114,29 @@
             btnExcluir.Image = (Image)resources.GetObject("btnExcluir.Image");
             btnExcluir.ImageTransparentColor = Color.Magenta;
             btnExcluir.Name = "btnExcluir";
-            btnExcluir.Size = new Size(23, 22);
+            btnExcluir.Size = new Size(29, 24);
             btnExcluir.Text = "toolStripButton3";
             btnExcluir.Click += btnExcluir_Click;
             // 
             // painelRegistros
             // 
             painelRegistros.Dock = DockStyle.Fill;
-            painelRegistros.Location = new Point(0, 49);
+            painelRegistros.Location = new Point(0, 57);
+            painelRegistros.Margin = new Padding(3, 4, 3, 4);
             painelRegistros.Name = "painelRegistros";
-            painelRegistros.Size = new Size(800, 401);
+            painelRegistros.Size = new Size(914, 543);
             painelRegistros.TabIndex = 2;
             // 
             // TelaPrincipalForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
             Controls.Add(painelRegistros);
             Controls.Add(toolStrip1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "TelaPrincipalForm";
             Text = "TelaPrincipalForm";
             menuStrip1.ResumeLayout(false);
@@ -198,13 +152,7 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem cadastrosToolStripMenuItem;
         private ToolStripMenuItem pessoasToolStripMenuItem;
-        private ToolStripMenuItem funcioanriosToolStripMenuItem;
-        private ToolStripMenuItem leitoresToolStripMenuItem;
         private ToolStripMenuItem exemplaresToolStripMenuItem;
-        private ToolStripMenuItem hQToolStripMenuItem;
-        private ToolStripMenuItem livroToolStripMenuItem;
-        private ToolStripMenuItem revistaToolStripMenuItem;
-        private ToolStripMenuItem genericoToolStripMenuItem;
         private ToolStripMenuItem exemplaresToolStripMenuItem1;
         private ToolStrip toolStrip1;
         private ToolStripButton btnAdicionar;

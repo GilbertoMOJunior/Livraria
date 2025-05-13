@@ -92,5 +92,10 @@ namespace Livraria.Apresentacao
             painelRegistros.Controls.Add(listagemEntidades);
         }
         #endregion
+
+        private void cadastrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

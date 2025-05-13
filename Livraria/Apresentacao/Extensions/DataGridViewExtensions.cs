@@ -1,4 +1,4 @@
-﻿namespace ControleDeBar.WinApp.Compartilhado.Extensions
+﻿namespace Livraria.Apresentacao.Extensions
 {
     public static class DataGridViewExtensions
     {

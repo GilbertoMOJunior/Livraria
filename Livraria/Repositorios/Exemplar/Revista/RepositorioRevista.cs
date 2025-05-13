@@ -1,4 +1,4 @@
-﻿using Livraria.Classes;
+﻿using Livraria.Classes.ModuloExemplar;
 
 namespace Livraria.Repositorios.Exemplar
 {

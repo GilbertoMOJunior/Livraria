@@ -1,4 +1,4 @@
-﻿using Livraria.Classes;
+﻿using Livraria.Classes.ModuloPessoa;
 
 namespace Livraria.Repositorios.Pessoa
 {
