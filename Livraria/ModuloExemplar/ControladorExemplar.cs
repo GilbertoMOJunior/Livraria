@@ -1,27 +1,55 @@
-﻿using Livraria.Compartilhado;
+﻿using Livraria.Classes.ModuloExemplar;
+using Livraria.Compartilhado;
 using Trabalho_Forms;
 
 namespace Livraria.ModuloExemplar
 {
-    public class ControladorExemplar : ControladorBase
+    public class ControladorExemplar(List<Exemplar> exemplares) : ControladorBase
     {
-        public override string TipoCadastro => throw new NotImplementedException();
+        TabelaExemplar tabela;
 
-        public override string ToolTipAdicionar => throw new NotImplementedException();
+        public override string TipoCadastro => "Cadastro de exemplar";
 
-        public override string ToolTipEditar => throw new NotImplementedException();
+        public override string ToolTipAdicionar => "Adicionar exemplar";
 
-        public override string ToolTipExcluir => throw new NotImplementedException();
+        public override string ToolTipEditar => "Editar exemplar";
+
+        public override string ToolTipExcluir => "Excluir exemplar";
 
         public override void Adicionar()
         {
             TelaExemplar tela = new();
             DialogResult result = tela.ShowDialog();
-        }
 
-        public override void CarregarRegistros()
-        {
-            throw new NotImplementedException();
+            if (tela.DialogResult != DialogResult.OK) return;
+
+            if (tela.LivroForm != null)
+            {
+                Livro livro = tela.LivroForm;
+                exemplares.Add(livro);
+            }
+            else if (tela.EbookForm != null)
+            {
+                Ebook ebook = tela.EbookForm;
+                exemplares.Add(ebook);
+            }
+            else if (tela.RevistaForm != null)
+            {
+                Revista revista = tela.RevistaForm;
+                exemplares.Add(revista);
+            }
+            else if (tela.HqForm != null)
+            {
+                HQ hq = tela.HqForm;
+                exemplares.Add(hq);
+            }
+            else if (tela.GenericoForm != null)
+            {
+                Generico generico = tela.GenericoForm;
+                exemplares.Add(generico);
+            }
+
+            CarregarRegistros();
         }
 
         public override void Editar()
@@ -36,7 +64,14 @@ namespace Livraria.ModuloExemplar
 
         public override UserControl ObterListagem()
         {
-            throw new NotImplementedException();
+            tabela ??= new TabelaExemplar();
+
+            CarregarRegistros();
+
+            return tabela;
         }
+
+        public override void CarregarRegistros()
+            => tabela.AtualizarRegistros(exemplares);
     }
 }

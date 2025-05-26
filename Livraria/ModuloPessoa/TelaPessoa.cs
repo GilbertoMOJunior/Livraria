@@ -1,9 +1,43 @@
 ﻿using ClassLib.Classes.Enum;
+using Livraria.Classes.ModuloPessoa;
 
 namespace Trabalho_Forms;
 
 public partial class TelaPessoa : Form
 {
+    public Leitor FormLeitor
+    {
+        get => leitor;
+        set
+        {
+            txtNome.Text = value.Nome;
+            txtEmail.Text = value.Email;
+            txtCPF.Text = value.Cpf;
+            txtTelefone.Text = value.Telefone;
+            dateNascimento.Value = value.Nascimento;
+        }
+    }
+
+    private Leitor leitor;
+
+    public Funcionario FormFuncionario
+    {
+        get => funcionario;
+        set
+        {
+            txtNome.Text = value.Nome;
+            txtEmail.Text = value.Email;
+            txtCPF.Text = value.Cpf;
+            txtTelefone.Text = value.Telefone;
+            dateNascimento.Value = value.Nascimento;
+            salario.Value = value.Salario;
+            cargaHoraria.Value = value.CargaHoraria;
+            txtFuncao.Text = value.Funcao;
+            cargoFuncionario.SelectedIndex = (int)value.Cargo;
+        }
+    }
+    private Funcionario funcionario;
+
     public TelaPessoa()
     {
         InitializeComponent();
@@ -13,74 +47,16 @@ public partial class TelaPessoa : Form
         cargoFuncionario.SelectedIndex = 0;
     }
 
-    public void Form2_Load(object sender, EventArgs e)
+    private void btnSalvar_Click(object sender, EventArgs e)
     {
+        if (this.controlador.SelectedTab == Leitor)
+            leitor = new Leitor(tipoLeitor.Text, txtNome.Text, dateNascimento.Value, txtCPF.Text, txtTelefone.Text, txtEmail.Text);
 
-    }
-
-    private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
-    {
-
-    }
-
-    private void textBox2_TextChanged(object sender, EventArgs e)
-    {
-
-    }
-
-    private void listaLeitor(object sender, EventArgs e)
-    {
-
-    }
-
-    private void nomePessoa(object sender, EventArgs e)
-    {
-
-    }
-
-    private void dataNascimentoPessoa(object sender, EventArgs e)
-    {
-
-    }
-
-    private void cpfPessoa(object sender, MaskInputRejectedEventArgs e)
-    {
-
-    }
-
-    private void emailPessoa(object sender, EventArgs e)
-    {
-
-    }
-
-    private void telefonePessoa(object sender, MaskInputRejectedEventArgs e)
-    {
-
-    }
-
-    public void cargaFuncionario(object sender, EventArgs e)
-    {
-
-    }
-
-    private void salarioFuncionario(object sender, EventArgs e)
-    {
-
-    }
-
-    private void cargaHorariaFuncionario(object sender, EventArgs e)
-    {
-
-    }
-
-    private void funcaoFuncionario(object sender, EventArgs e)
-    {
-
-    }
-
-    private void botaoSalvarPessoa(object sender, EventArgs e)
-    {
-
+        if (this.controlador.SelectedTab == Funcionario)
+        {
+            funcionario = new Funcionario((CargoFuncionario)cargoFuncionario.SelectedIndex, salario.Value, (int)cargaHoraria.Value, txtFuncao.Text,
+            txtNome.Text, dateNascimento.Value, txtCPF.Text, txtTelefone.Text, txtEmail.Text);
+        }
     }
 }
 //Gilberto Mota de Oliveira Junior

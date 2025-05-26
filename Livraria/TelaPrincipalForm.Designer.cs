@@ -39,6 +39,8 @@
             btnEditar = new ToolStripButton();
             btnExcluir = new ToolStripButton();
             painelRegistros = new Panel();
+            leitoresToolStripMenuItem = new ToolStripMenuItem();
+            funcionariosToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             toolStrip1.SuspendLayout();
             SuspendLayout();
@@ -49,8 +51,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { cadastrosToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Padding = new Padding(7, 3, 0, 3);
-            menuStrip1.Size = new Size(914, 30);
+            menuStrip1.Size = new Size(800, 24);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -58,20 +59,20 @@
             // 
             cadastrosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { pessoasToolStripMenuItem, exemplaresToolStripMenuItem });
             cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
-            cadastrosToolStripMenuItem.Size = new Size(88, 24);
+            cadastrosToolStripMenuItem.Size = new Size(71, 20);
             cadastrosToolStripMenuItem.Text = "Cadastros";
             // 
             // pessoasToolStripMenuItem
             // 
+            pessoasToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { leitoresToolStripMenuItem, funcionariosToolStripMenuItem });
             pessoasToolStripMenuItem.Name = "pessoasToolStripMenuItem";
-            pessoasToolStripMenuItem.Size = new Size(224, 26);
+            pessoasToolStripMenuItem.Size = new Size(180, 22);
             pessoasToolStripMenuItem.Text = "Pessoas";
-            pessoasToolStripMenuItem.Click += pessoasToolStripMenuItem_Click;
             // 
             // exemplaresToolStripMenuItem
             // 
             exemplaresToolStripMenuItem.Name = "exemplaresToolStripMenuItem";
-            exemplaresToolStripMenuItem.Size = new Size(224, 26);
+            exemplaresToolStripMenuItem.Size = new Size(180, 22);
             exemplaresToolStripMenuItem.Text = "Exemplares";
             exemplaresToolStripMenuItem.Click += exemplaresToolStripMenuItem_Click;
             // 
@@ -84,9 +85,9 @@
             // 
             toolStrip1.ImageScalingSize = new Size(20, 20);
             toolStrip1.Items.AddRange(new ToolStripItem[] { btnAdicionar, btnEditar, btnExcluir });
-            toolStrip1.Location = new Point(0, 30);
+            toolStrip1.Location = new Point(0, 24);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(914, 27);
+            toolStrip1.Size = new Size(800, 27);
             toolStrip1.TabIndex = 1;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -97,7 +98,7 @@
             btnAdicionar.Image = (Image)resources.GetObject("btnAdicionar.Image");
             btnAdicionar.ImageTransparentColor = Color.Magenta;
             btnAdicionar.Name = "btnAdicionar";
-            btnAdicionar.Size = new Size(29, 24);
+            btnAdicionar.Size = new Size(24, 24);
             btnAdicionar.Text = "Adicionar Registro";
             btnAdicionar.Click += btnAdicionar_Click;
             // 
@@ -108,7 +109,7 @@
             btnEditar.Image = (Image)resources.GetObject("btnEditar.Image");
             btnEditar.ImageTransparentColor = Color.Magenta;
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(29, 24);
+            btnEditar.Size = new Size(24, 24);
             btnEditar.Text = "Editar Registro";
             btnEditar.Click += btnEditar_Click;
             // 
@@ -119,29 +120,41 @@
             btnExcluir.Image = (Image)resources.GetObject("btnExcluir.Image");
             btnExcluir.ImageTransparentColor = Color.Magenta;
             btnExcluir.Name = "btnExcluir";
-            btnExcluir.Size = new Size(29, 24);
+            btnExcluir.Size = new Size(24, 24);
             btnExcluir.Text = "Excluir Registro";
             btnExcluir.Click += btnExcluir_Click;
             // 
             // painelRegistros
             // 
             painelRegistros.Dock = DockStyle.Fill;
-            painelRegistros.Location = new Point(0, 57);
-            painelRegistros.Margin = new Padding(3, 4, 3, 4);
+            painelRegistros.Location = new Point(0, 51);
             painelRegistros.Name = "painelRegistros";
-            painelRegistros.Size = new Size(914, 543);
+            painelRegistros.Size = new Size(800, 399);
             painelRegistros.TabIndex = 2;
+            // 
+            // leitoresToolStripMenuItem
+            // 
+            leitoresToolStripMenuItem.Name = "leitoresToolStripMenuItem";
+            leitoresToolStripMenuItem.Size = new Size(180, 22);
+            leitoresToolStripMenuItem.Text = "Leitores";
+            leitoresToolStripMenuItem.Click += leitoresToolStripMenuItem_Click;
+            // 
+            // funcionariosToolStripMenuItem
+            // 
+            funcionariosToolStripMenuItem.Name = "funcionariosToolStripMenuItem";
+            funcionariosToolStripMenuItem.Size = new Size(180, 22);
+            funcionariosToolStripMenuItem.Text = "Funcionarios";
+            funcionariosToolStripMenuItem.Click += funcionariosToolStripMenuItem_Click;
             // 
             // TelaPrincipalForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(914, 600);
+            ClientSize = new Size(800, 450);
             Controls.Add(painelRegistros);
             Controls.Add(toolStrip1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "TelaPrincipalForm";
             Text = "TelaPrincipalForm";
             menuStrip1.ResumeLayout(false);
@@ -164,5 +177,7 @@
         private ToolStripButton btnEditar;
         private ToolStripButton btnExcluir;
         private Panel painelRegistros;
+        private ToolStripMenuItem leitoresToolStripMenuItem;
+        private ToolStripMenuItem funcionariosToolStripMenuItem;
     }
 }

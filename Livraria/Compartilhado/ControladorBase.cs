@@ -2,9 +2,9 @@
 {
     public abstract class ControladorBase
     {
+        #region ToolTips
         public abstract string TipoCadastro { get; }
 
-        #region ToolTips
         public abstract string ToolTipAdicionar { get; }
         public abstract string ToolTipEditar { get; }
         public abstract string ToolTipExcluir { get; }
