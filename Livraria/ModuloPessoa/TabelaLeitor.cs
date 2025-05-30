@@ -22,7 +22,7 @@ namespace Livraria.ModuloPessoa
                 grid.Rows.Add(p.Nome, p.Nascimento.ToShortDateString(), p.Cpf, p.Telefone, p.Email, p.Tipo);
         }
 
-        public int ObterRegistroSelecionado() => grid.SelecionarId();
+        public string ObterRegistroSelecionado() => grid.SelecionarNome();
 
         public DataGridViewColumn[] ObterColunas() =>
         [

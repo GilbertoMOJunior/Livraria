@@ -79,9 +79,9 @@ namespace Livraria.Apresentacao
 
         private void CargaInicial()
         {
-            // Funcionários
             for (int i = 1; i <= 5; i++)
             {
+                // Funcionários
                 funcionarios.Add(new Funcionario(
                     cargo: (CargoFuncionario)i,
                     salario: 3000 + i * 100,
@@ -103,6 +103,10 @@ namespace Livraria.Apresentacao
                     telefone: $"(11) 1111-111{i}",
                     email: $"leitor{i}@exemplo.com"
                 ));
+            }
+
+            for (int i = 1; i <= 5; i++)
+            {
                 // Livros
                 exemplares.Add(new Livro(
                     paginas: 100 + i,
@@ -116,6 +120,10 @@ namespace Livraria.Apresentacao
                     genero: (Genero)i,
                     status: (StatusExemplar)i
                 ));
+            }
+
+            for (int i = 1; i <= 5; i++)
+            {
                 // Revistas
                 exemplares.Add(new Revista(
                     edicao: i,
@@ -128,7 +136,11 @@ namespace Livraria.Apresentacao
                     genero: (Genero)i,
                     status: (StatusExemplar)i
                 ));
-               // HQs
+            }
+
+            for (int i = 1; i <= 5; i++)
+            {
+                // HQs
                 exemplares.Add(new HQ(
                     edicao: i,
                     ilustrador: $"Ilustrador {i}",
@@ -140,6 +152,10 @@ namespace Livraria.Apresentacao
                     genero: (Genero)i,
                     status: (StatusExemplar)i
                 ));
+            }
+
+            for (int i = 1; i <= 5; i++)
+            {
                 // Ebooks
                 exemplares.Add(new Ebook(
                     formato: (FormatoEbook)i,
@@ -156,6 +172,10 @@ namespace Livraria.Apresentacao
                     genero: (Genero)i,
                     status: (StatusExemplar)i
                 ));
+            }
+
+            for (int i = 1; i <= 5; i++)
+            {
                 // Genéricos
                 exemplares.Add(new Generico(
                     tipo: (TipoGenerico)i,

@@ -47,6 +47,7 @@
             grid.AllowUserToResizeRows = false;
             grid.RowHeadersVisible = false;
         }
+
         public static int SelecionarId(this DataGridView grid)
         {
             if (grid.SelectedRows.Count == 0)
@@ -61,6 +62,22 @@
                 return -1;
 
             return (int)valorSelecionado;
+        }
+        
+        public static string SelecionarNome(this DataGridView grid)
+        {
+            if (grid.SelectedRows.Count == 0)
+                return "";
+
+            object valorSelecionado = grid
+                .SelectedRows[0]
+                .Cells[0]
+                .Value;
+
+            if (valorSelecionado == null)
+                return "";
+
+            return (string)valorSelecionado;
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Livraria.Classes.ModuloExemplar;
+using Livraria.Classes.ModuloPessoa;
 using Livraria.Compartilhado;
 using Trabalho_Forms;
 
@@ -54,12 +55,28 @@ namespace Livraria.ModuloExemplar
 
         public override void Editar()
         {
-            throw new NotImplementedException();
+            var tituloSelecionado = tabela.ObterRegistroSelecionado();
+
+            var exemplarSelecionado = exemplares.Find(x => x.Titulo == tituloSelecionado);
+
+            if (exemplarSelecionado == null) return;
+
+            exemplares.Remove(exemplarSelecionado);
+            
+            Adicionar();
         }
 
         public override void Excluir()
         {
-            throw new NotImplementedException();
+            var tituloSelecionado = tabela.ObterRegistroSelecionado();
+
+            var exemplarSelecionado = exemplares.Find(x => x.Titulo == tituloSelecionado);
+
+            if (exemplarSelecionado == null) return;
+
+            exemplares.Remove(exemplarSelecionado);
+
+            CarregarRegistros();
         }
 
         public override UserControl ObterListagem()

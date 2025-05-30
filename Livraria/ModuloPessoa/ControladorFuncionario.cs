@@ -34,12 +34,28 @@ namespace Livraria.ModuloPessoa
 
         public override void Editar()
         {
-            throw new NotImplementedException();
+            var nomeSelecionado = tabela.ObterRegistroSelecionado();
+
+            var funcionarioSelecionado = funcionarios.Find(x => x.Nome == nomeSelecionado);
+
+            if (funcionarioSelecionado == null) return;
+
+            funcionarios.Remove(funcionarioSelecionado);
+            
+            Adicionar();
         }
 
         public override void Excluir()
         {
-            throw new NotImplementedException();
+            var nomeSelecionado = tabela.ObterRegistroSelecionado();
+
+            var funcionarioSelecionado = funcionarios.Find(x => x.Nome == nomeSelecionado);
+
+            if (funcionarioSelecionado == null) return;
+
+            funcionarios.Remove(funcionarioSelecionado);
+
+            CarregarRegistros();
         }
 
         public override UserControl ObterListagem()

@@ -23,7 +23,7 @@ namespace Livraria.ModuloExemplar
                 grid.Rows.Add(p.Titulo, p.SubTitulo, p.Genero, p.Escritor, p.Editora, p.AnoPublicado, p.Status);
         }
 
-        public int ObterRegistroSelecionado() => grid.SelecionarId();
+        public string ObterRegistroSelecionado() => grid.SelecionarNome();
         private DataGridViewColumn[] ObterColunas() =>
         [
             new DataGridViewTextBoxColumn { DataPropertyName = "Titulo", HeaderText = "Titulo" },
